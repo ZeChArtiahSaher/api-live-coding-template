@@ -5,6 +5,9 @@
     "start": "ts-node ./src/app.ts",
     "test": "npx jest"
   },
+  "engines": {
+    "node": "16"
+  },
   "dependencies": {
     "@altostra/type-validations": "^2.6.3",
     "@koa/cors": "^3.3.0",
@@ -13,10 +16,8 @@
     "koa-bodyparser": "^4.3.0",
     "koa-helmet": "^6.1.0",
     "koa-json": "^2.0.2",
-    "koa-logger": "^3.2.1",
     "koa-router": "^10.1.1",
     "koa-swagger-decorator": "^1.8.5",
-    "node-cache": "^5.1.2",
     "reflect-metadata": "^0.1.13",
     "supertest-koa-agent": "^0.3.2"
   },
@@ -27,7 +28,6 @@
     "@types/koa-bodyparser": "^4.3.7",
     "@types/koa-helmet": "^6.0.4",
     "@types/koa-json": "^2.0.20",
-    "@types/koa-logger": "^3.1.2",
     "@types/koa-router": "^7.4.4",
     "@types/node": "^18.0.1",
     "@types/supertest": "^2.0.12",
