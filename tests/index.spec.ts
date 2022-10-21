@@ -6,7 +6,7 @@ const app = rawApp.callback()
 describe('Index controller', () => {
   describe('getData endpoint', () => {
     it('should return 200 status', async () => {
-      const response = await request(app).get(`/resource?limit=5`)
+      const response = await request(app).get('/resource')
         .expect(200)
     })
   })
