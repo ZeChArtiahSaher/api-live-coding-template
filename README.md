@@ -2,7 +2,7 @@ KOA API with a single endpoint.
 
 `npm install`
 
-`npm start`
+`npm start` or `npm run dev`
 
 go to: localhost:3000/resource and make sure there is a valid response returned.
 
