@@ -5,8 +5,7 @@ import {
 } from 'typeorm';
 
 export class CreateTableEvents1708282905473
-  implements MigrationInterface
-{
+  implements MigrationInterface {
   tableName = 'events';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
@@ -15,14 +14,15 @@ export class CreateTableEvents1708282905473
         name: this.tableName,
         columns: [
           {
-            name: 'id',
-            type: 'uuid',
-            isPrimary: true,
-            default: 'gen_random_uuid()',
+            name: 'id', 
+            type: 'int', 
+            isPrimary: true, 
+            isGenerated: true, 
+            generationStrategy: 'increment',
           },
           {
             name: 'user_id',
-            type: 'uuid',
+            type: 'int',
             isNullable: false,
           },
           {

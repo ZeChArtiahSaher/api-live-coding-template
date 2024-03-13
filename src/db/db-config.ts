@@ -18,5 +18,6 @@ export const dbConfig = () => {
     maxQueryExecutionTime: 5000,
     connectTimeoutMS: 5000,
     ssl: true,
+    logging: false,
   } as DataSourceOptions;
 };

@@ -2,7 +2,7 @@
   "name": "project",
   "version": "0.0.1",
   "scripts": {
-    "build": "tsc",
+    "build": "del-cli --force ./dist && tsc",
     "start": "ts-node ./src/app.ts",
     "dev": "nodemon ./src/app.ts",
     "test": "npx jest",
@@ -13,6 +13,7 @@
     "node": "20"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@koa/cors": "^5.0.0",
     "axios": "^1.6.7",
     "koa": "^2.15.0",
@@ -36,6 +37,8 @@
     "@types/koa-router": "^7.4.8",
     "@types/node": "^20.11.19",
     "@types/supertest": "^6.0.2",
+    "@types/uuid": "^9.0.8",
+    "del-cli": "^5.1.0",
     "jest": "^29.7.0",
     "nodemon": "^3.0.3",
     "supertest": "^6.3.4",
