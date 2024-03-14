@@ -14,13 +14,4 @@
     },
   },
   "include": ["./src/**/*", "test"],
-  // "exclude": ["node_modules", "**/*.spec.ts", "**/*.test.ts"],
 }
-
-// {
-//   "compilerOptions": {
-//     "paths": {
-//       "@/*": ["./src/*"]
-//     }
-//   }
-// }

@@ -4,8 +4,9 @@ import * as cors from '@koa/cors';
 import * as helmet from 'koa-helmet';
 import * as json from 'koa-json';
 import 'reflect-metadata';
-import { bindControllers } from './controllers.init';
-import { bindServices } from '@/services.init'
+import { initControllers } from './controllers.init';
+import { initServices } from '@/services.init'
+import { bindServices } from '@/middleware/bind-svc'
 
 const app = new Koa();
 const port = process.env.PORT || 3000;
@@ -17,11 +18,13 @@ app.use(bodyParser());
 
 app.listen(port, async() => {
   console.log('binding services...')
-  const services = await bindServices()
+  const services = await initServices()
+  
+  app.use(bindServices(services))
   
   console.log('binding controllers...')
   
-  const router = await bindControllers(services)
+  const router = await initControllers(services)
   
   app
     .use(router.routes())
